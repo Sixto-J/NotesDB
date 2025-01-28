@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/main" >
+
+    <TextView
+        android:id="@+id/label_creacio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:hint="Creació d' un nou comentari"
+        android:textSize="20sp"
+        android:layout_marginBottom="5dp"/>
+
+    <EditText
+        android:id="@+id/edit_titol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:hint="Posar nom al comentari"
+        android:textSize="20sp"
+        android:layout_below="@+id/label_creacio"/>
+
+    <TextView
+        android:id="@+id/label_comentari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="Text del nou comentari"
+        android:textSize="20sp"
+        android:layout_below="@+id/edit_titol"/>
+
+    <EditText
+        android:id="@+id/edit_comentari"
+        android:layout_width="250dp"
+        android:layout_height="33dp"
+        android:layout_below="@+id/label_comentari"
+        android:layout_marginTop="30dp" />
+
+    <Button
+        android:id="@+id/crear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="CREAR"
+        android:layout_below="@+id/edit_comentari"/>
+
+    <TextView android:id="@+id/label_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seleccioni un comentari"
+        android:textSize="20sp"
+        android:layout_below="@+id/crear"
+        />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/label_spinner"
+        android:layout_marginTop="50dp" />
+
+    <Button
+        android:id="@+id/veure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="VEURE"
+        android:layout_below="@+id/spinner" />
+
+    <TextView android:id="@+id/label_veure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Veure comentari"
+        android:textSize="20sp"
+        android:layout_below="@+id/veure" />
+
+    <EditText
+        android:id="@+id/edit_veure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:hint="comentari"
+        android:layout_below="@+id/label_veure"/>
+
+    <Button
+        android:id="@+id/eliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="ELIMINAR"
+        android:layout_below="@+id/edit_veure"/>
+
+
+
+</RelativeLayout>
