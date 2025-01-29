@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:hint="Creació d' un nou comentari"
+        android:hint="Creació d'un nou comentari"
         android:textSize="20sp"
         android:layout_marginBottom="5dp"/>
 
@@ -40,16 +40,16 @@
     <EditText
         android:id="@+id/edit_comentari"
         android:layout_width="250dp"
-        android:layout_height="33dp"
+        android:layout_height="45dp"
         android:layout_below="@+id/label_comentari"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="15dp" />
 
     <Button
         android:id="@+id/crear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:text="CREAR"
         android:layout_below="@+id/edit_comentari"/>
 
@@ -59,6 +59,7 @@
         android:text="Seleccioni un comentari"
         android:textSize="20sp"
         android:layout_below="@+id/crear"
+        android:layout_marginTop="20dp"
         />
 
     <Spinner
@@ -68,14 +69,14 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/label_spinner"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="25dp" />
 
     <Button
         android:id="@+id/veure"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:text="VEURE"
         android:layout_below="@+id/spinner" />
 
@@ -84,7 +85,8 @@
         android:layout_height="wrap_content"
         android:text="Veure comentari"
         android:textSize="20sp"
-        android:layout_below="@+id/veure" />
+        android:layout_below="@+id/veure"
+        android:marginTop="20dp"/>
 
     <EditText
         android:id="@+id/edit_veure"
@@ -98,7 +100,7 @@
         android:id="@+id/eliminar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:text="ELIMINAR"
         android:layout_below="@+id/edit_veure"/>
 
