@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                     // making input filed text to blank
                     inputLabel.setText("");
+                    inputComentari.setText("");
 
                     // Hiding the keyboard
                     InputMethodManager imm = (InputMethodManager)
@@ -88,8 +89,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
           @Override
               public void onClick(View arg0) {
-
-              databaseHandler.deleteRow(1);
+              int selectedItemId = my_spinner.getSelectedItemPosition();
+              Log.d("POSICION", "Selected Item Position: " + String.valueOf(selectedItemId));
+              databaseHandler.deleteRow(selectedItemId);
               loadSpinnerData();
 
                }
