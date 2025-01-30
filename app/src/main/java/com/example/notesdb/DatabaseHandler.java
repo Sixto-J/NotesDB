@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "spinnerExample";
     private static final String TABLE_NAME = "labels";
     private static final String COLUMN_ID = "id";
@@ -27,11 +27,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         // Category table create query
         String CREATE_ITEM_TABLE = "CREATE TABLE " + TABLE_NAME + "("
-                + COLUMN_ID + "INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_NAME + " TEXT NOT NULL )";
+                + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_NAME + " TEXT NOT NULL )";
         db.execSQL(CREATE_ITEM_TABLE);
 
-
-        Log.d("NUMBER_OF_COLUMNS", String.valueOf(getColumnCount(CREATE_ITEM_TABLE)));
+      // Log.d("NUMBER_OF_COLUMNS", String.valueOf(getColumnCount(CREATE_ITEM_TABLE)));
     }
 
     public int getColumnCount(String query) {

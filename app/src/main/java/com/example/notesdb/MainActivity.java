@@ -104,8 +104,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
      * Function to load the spinner data from SQLite database
      * */
     private void loadSpinnerData() {
-        DatabaseHandler db = new DatabaseHandler(getApplicationContext());
-        List<String> labels = db.getAllLabels();
+        List<String> labels = databaseHandler.getAllLabels();
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, labels);
 
@@ -119,8 +118,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private void mostrarComentari(){
         logCursorData();
 
-        DatabaseHandler db = new DatabaseHandler(getApplicationContext());
-        List<String> comentaris = db.getAllComentaris();
+        List<String> comentaris = databaseHandler.getAllComentaris();
         String comentari_localitzat = comentaris.get(
                 my_spinner.getSelectedItemPosition());
         EditText comentari = findViewById(R.id.edit_veure);

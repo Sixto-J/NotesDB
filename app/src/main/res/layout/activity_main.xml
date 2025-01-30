@@ -86,7 +86,7 @@
         android:text="Veure comentari"
         android:textSize="20sp"
         android:layout_below="@+id/veure"
-        android:marginTop="20dp"/>
+        android:layout_marginTop="20dp"/>
 
     <EditText
         android:id="@+id/edit_veure"
