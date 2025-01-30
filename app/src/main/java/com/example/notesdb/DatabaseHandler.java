@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NAME = "spinnerExample";
     private static final String TABLE_NAME = "labels";
     private static final String COLUMN_ID = "id";
@@ -29,6 +29,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String CREATE_ITEM_TABLE = "CREATE TABLE " + TABLE_NAME + "("
                 + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_NAME + " TEXT NOT NULL )";
         db.execSQL(CREATE_ITEM_TABLE);
+
+        String alterTable = "ALTER TABLE " + TABLE_NAME + " ADD COLUMN " + COLUMN_TEXT + " TEXT";
+        // Change TEXT to the desired type
+        db.execSQL(alterTable);
 
       // Log.d("NUMBER_OF_COLUMNS", String.valueOf(getColumnCount(CREATE_ITEM_TABLE)));
     }
@@ -62,10 +66,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             // Create tables again
             onCreate(db);
 
-            String alterTable = "ALTER TABLE " + TABLE_NAME + " ADD COLUMN " + COLUMN_TEXT + " TEXT";
-            // Change TEXT to the desired type
-            db.execSQL(alterTable);
-
         }
 
     }
@@ -78,8 +78,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.beginTransaction(); // Start the transaction
         try {
                 ContentValues contentValues = new ContentValues();
-                contentValues.put("text", text); // First element is text
-                contentValues.put("name", label); // Second element is label
+                contentValues.put("label", label); // First element is label
+                contentValues.put("text", text); // Second element is text
                 db.insert("labels", null, contentValues);
 
             db.setTransactionSuccessful(); // Mark the transaction as successful
